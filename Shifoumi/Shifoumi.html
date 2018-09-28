@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Shifoumi</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+	<h1 class="title">Shifoumi en ligne</h1>
+
+	<div class="cards">
+		<img data-name="Pierre" class="images" src="img/Stone.jpg">
+		<img data-name="Feuille" class="images" src="img/Feuille.jpg">
+		<img data-name="Ciseaux" class="images" src="img/Ciseaux.jpg">
+	</div>
+
+	<script>
+		const buttons = document.querySelectorAll("img");
+
+		for(let i = 0; i < buttons.length; i++){
+			buttons[i].addEventListener("click", function(){
+				const joueur = buttons[i].name;
+				const robot = buttons[Math.floor(Math.random() * buttons.length)].name;
+				let resultat = "";
+
+				if(joueur === robot){
+					resultat = "Egalité !"
+				}else if ((joueur === "Pierre" && robot === "Ciseaux") || (joueur === "Feuille" && robot === "Pierre") || (joueur === "Ciseaux" && robot === "Feuille")) {
+					resultat = "Gagné !"
+				}else{
+					resultat = "Perdu !"
+				}
+
+				alert("Player : " + joueur);
+				alert("VS");
+				alert("Robot : " + robot);
+				alert("Score : " + resultat)
+
+			});
+		}
+	</script>
+
+</body>
+</html>

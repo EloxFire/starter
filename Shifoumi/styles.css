@@ -1,0 +1,21 @@
+.title{
+	font-family: Verdana;
+	text-align: center;
+	text-decoration: underline;
+}
+
+.images{
+	width: auto;
+	height: auto;
+	max-height: 300px;
+	max-width: 300px;
+	text-align: center;
+	transition: 0.3s;
+}
+.cards{
+	text-align: center;
+
+}
+.images:hover{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.90);
+}
